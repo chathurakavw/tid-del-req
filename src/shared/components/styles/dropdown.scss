@@ -1,0 +1,37 @@
+.rc-selector {
+  border: 1px solid #CDDFEA;
+  border-radius: 8px;
+  padding: 8px;
+  width: 100%;
+  outline: none;
+
+  &:active,
+  &:focus,
+  &:hover {
+    border: 1px solid #F3FAFF;
+    background-color: #F3FAFF;
+    outline: 0;
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0) !important;
+
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: #999;
+      transition: all .3s ease-in;
+    }
+  }
+
+  .rc-menu{
+    background: red;
+  }
+}
+
+/*
+.rc-select-single:not(.rc-select-customize-input) .rc-select-selector {
+  padding: 1px;
+  border: none;
+}
+
+.rc-select-dropdown {
+  border: 1px solid transparent;
+  background: #F3FAFF;
+  width: 120px;
+}*/
