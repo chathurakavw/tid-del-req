@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { useErrorBoundary } from 'react-error-boundary';
 import axiosInstance from 'app/axios/axios-instance';
-import {Option} from 'rc-select';
+import { Option } from 'rc-select';
 import { Datepicker, Icon, Input, Select, Switch, Textarea } from 'shared/components';
 
 /**
@@ -39,7 +39,14 @@ const LoginPage: FC<ILoginPageProps> = () => {
                 iconName="outline-arrow-right"
                 sizeVariant="icon-sm"
             />
-            <Input placeholder="id" />
+            <Input
+                placeholder="id"
+                addonAfter={<Icon
+                    iconName="outline-arrow-right"
+                    sizeVariant="icon-lg"
+                    colorVariant="icon-black"
+                />}
+            />
             <br />
             <br />
             <Select>
