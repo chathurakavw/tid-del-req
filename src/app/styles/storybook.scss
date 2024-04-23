@@ -1,0 +1,4 @@
+.storybook-wrapper {
+    @include flex-center();
+    padding: 4rem;
+}

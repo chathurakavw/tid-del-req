@@ -16,6 +16,7 @@
         "@rematch/core": "^2.2.0",
         "@rematch/persist": "^2.1.2",
         "axios": "^1.6.7",
+        "classnames": "^2.5.1",
         "node-sass": "^9.0.0",
         "rc-input": "^1.4.5",
         "rc-picker": "^4.4.1",

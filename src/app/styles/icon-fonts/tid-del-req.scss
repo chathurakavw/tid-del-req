@@ -1,0 +1,59 @@
+$tid-del-req-font: "tid-del-req";
+
+@font-face {
+    font-family: $tid-del-req-font;
+    src: url("/src/app/styles/icon-fonts/tid-del-req.eot?8fcfd312b779b04c71388aa30a05bee7#iefix") format("embedded-opentype"),
+url("/src/app/styles/icon-fonts/tid-del-req.woff2?8fcfd312b779b04c71388aa30a05bee7") format("woff2"),
+url("/src/app/styles/icon-fonts/tid-del-req.woff?8fcfd312b779b04c71388aa30a05bee7") format("woff");
+}
+
+i[class^="outline-"]:before, i[class*=" outline-"]:before {
+    font-family: tid-del-req !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$tid-del-req-map: (
+    "arrow-right": "\f101",
+    "chevron-down": "\f102",
+    "chevron-left": "\f103",
+    "chevron-right": "\f104",
+    "chevron-up": "\f105",
+    "circle-close": "\f106",
+    "edit": "\f107",
+    "menu": "\f108",
+    "search": "\f109",
+);
+
+.outline-arrow-right:before {
+    content: map-get($tid-del-req-map, "arrow-right");
+}
+.outline-chevron-down:before {
+    content: map-get($tid-del-req-map, "chevron-down");
+}
+.outline-chevron-left:before {
+    content: map-get($tid-del-req-map, "chevron-left");
+}
+.outline-chevron-right:before {
+    content: map-get($tid-del-req-map, "chevron-right");
+}
+.outline-chevron-up:before {
+    content: map-get($tid-del-req-map, "chevron-up");
+}
+.outline-circle-close:before {
+    content: map-get($tid-del-req-map, "circle-close");
+}
+.outline-edit:before {
+    content: map-get($tid-del-req-map, "edit");
+}
+.outline-menu:before {
+    content: map-get($tid-del-req-map, "menu");
+}
+.outline-search:before {
+    content: map-get($tid-del-req-map, "search");
+}

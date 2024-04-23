@@ -1,0 +1,49 @@
+.icon {
+  display: inline-block;
+  font-size: 2em;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  &.icon-black {
+    color: $text-black;
+  }
+
+  &.icon-white {
+    color: $text-white;
+  }
+
+  &.icon-primary-green {
+    color: $primary-green;
+  }
+
+  &.icon-sm {
+    font-size: 1.2em;
+    line-height: 0.04167em;
+    vertical-align: -0.125em;
+  }
+
+  &.icon-lg {
+    font-size: 1.6em;
+    line-height: 0.03125em;
+    vertical-align: -0.1875em;
+  }
+
+  &.icon-xl {
+    font-size: 2em;
+    line-height: 0.02083em;
+    vertical-align: -0.25em;
+  }
+
+  &.icon-xxl {
+    font-size: 2.5em;
+    line-height: 0.01941em;
+    vertical-align: -0.3125em;
+  }
+}
+
+/*max-width: 768px*/
+@media (max-width: $md) {
+  .icon.mobileIcon {
+    font-size: 24px;
+  }
+}

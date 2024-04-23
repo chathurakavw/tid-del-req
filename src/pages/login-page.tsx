@@ -1,7 +1,8 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { useErrorBoundary } from 'react-error-boundary';
 import axiosInstance from 'app/axios/axios-instance';
-import { Input, Textarea, Dropdown, Switch, Datepicker } from 'shared/components';
+import {Option} from 'rc-select';
+import { Datepicker, Icon, Input, Select, Switch, Textarea } from 'shared/components';
 
 /**
  *
@@ -32,10 +33,18 @@ const LoginPage: FC<ILoginPageProps> = () => {
             >
                 Login
             </button>
+            ICON
+            <Icon
+                colorVariant="icon-black"
+                iconName="outline-arrow-right"
+                sizeVariant="icon-sm"
+            />
             <Input placeholder="id" />
             <br />
             <br />
-            <Dropdown />
+            <Select>
+                <Option value="jack">jack</Option>
+            </Select>
             <br />
             <br />
             <Textarea placeholder="write something...!" />
