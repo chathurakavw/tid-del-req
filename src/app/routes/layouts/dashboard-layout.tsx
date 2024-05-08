@@ -4,6 +4,8 @@ import { pageRoutes } from 'app/constants/page-routes';
 import ReactOutlet from 'app/routes/layouts/react-outlet';
 import { useAppSelector } from 'shared/hooks/redux-hooks';
 import { RootState } from 'shared/redux/store';
+import SideBar from 'shared/components/side-bar/side-bar';
+import Header from 'shared/components/header/header';
 
 const DashboardLayout: FC = () => {
     // The useAppSelector hook is used to select specific pieces of state from the Redux store, and the selected values are then destructured
@@ -18,7 +20,17 @@ const DashboardLayout: FC = () => {
         return <Navigate to={pageRoutes.HOME} replace />;
     }
 
-    return <ReactOutlet />;
+    return (
+        <div className="main-layout">
+            <div className="dashboard-layout">
+                <SideBar />
+                <div className="dashboard-wrapper">
+                    <Header />
+                    <ReactOutlet />
+                </div>
+            </div>
+        </div>
+    );
 };
 
 export default DashboardLayout;

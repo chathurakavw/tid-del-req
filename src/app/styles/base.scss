@@ -15,11 +15,13 @@
 html,
 body {
   font-family: $font-family;
+  height: 100vh;
+  background: $background-gradient;
   width: 100%;
   max-width: 100%;
-  //background: $background-black;
-  margin: 0;
-  //color: $text-white;
+  //display: flex;
+  //align-items: center;
+  //justify-content: center;
 }
 
 /* A elements that don't have a class get default styles */

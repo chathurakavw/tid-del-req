@@ -3,19 +3,19 @@ import RCInput from 'rc-input';
 import { IInputProps } from 'shared/components/input/input-type';
 import { Icon } from 'shared/components';
 
-const Input: FC<IInputProps> = ({ ...inputProps }) => {
+const Input: FC<IInputProps> = ({ className, ...inputProps }) => {
     const [showClearIcon, setShowClearIcon] = useState<boolean>(false);
 
     return (
         <RCInput
             {...inputProps}
-            className="tid-text-box"
+            className={`tid-text-box ${className ?? ''}`}
             allowClear={{
-                clearIcon: showClearIcon ? <Icon
-                    iconName="outline-circle-close"
-                    sizeVariant="icon-lg"
-                    colorVariant="icon-black"
-                /> : <></>,
+                clearIcon: showClearIcon ? (
+                    <Icon iconName="outline-circle-close" sizeVariant="icon-lg" colorVariant="icon-black" />
+                ) : (
+                    <></>
+                ),
             }}
             onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
                 if (inputProps.onChange) {
@@ -24,7 +24,7 @@ const Input: FC<IInputProps> = ({ ...inputProps }) => {
                 setShowClearIcon(event.target.value.length > 0);
             }}
         />
-    )
-}
+    );
+};
 
 export default Input;

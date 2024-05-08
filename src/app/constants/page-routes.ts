@@ -1,4 +1,9 @@
 export const pageRoutes = {
-    HOME: '/',
     DASHBOARD: '/dashboard',
+    HOME: 'home',
+    CREATE: 'create',
+    INBOX: 'inbox',
+    QUEUE: 'queue',
+    ACTIONED: 'actioned',
+    SEARCH: 'search',
 };

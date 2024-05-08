@@ -1,0 +1,21 @@
+.section {
+  height: calc(100vh - clamp(13rem, 1rem + 10vh, 15rem));
+  padding: 1rem;
+  margin-block-start: 1rem;
+  background: white;
+  border-radius: 2rem;
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar{
+    display: none;
+  }
+
+  @include responsive("md"){
+    height: calc(100vh - clamp(11rem, 1rem + 10vh, 15rem));
+    margin-block-start: 1rem;
+  }
+
+  @include responsive("xl"){
+    height: 100vh;
+  }
+}

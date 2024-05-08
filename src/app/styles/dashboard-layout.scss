@@ -1,0 +1,26 @@
+.main-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .dashboard-layout{
+    width: min(100%, 1440px);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin: auto 0;
+    padding: 1rem;
+
+    .dashboard-wrapper{
+      width: 100%;
+      height: calc(100vh - 2rem);
+      background: transparent;
+      border-radius: 2rem;
+      overflow: hidden;
+
+      @include responsive("md"){
+        background: transparent;
+      }
+    }
+  }
+}

@@ -3,6 +3,7 @@ import { useErrorBoundary } from 'react-error-boundary';
 import axiosInstance from 'app/axios/axios-instance';
 import { Option } from 'rc-select';
 import { Datepicker, Icon, Input, Select, Switch, Textarea } from 'shared/components';
+import { LoginSlice } from 'features/index';
 
 /**
  *
@@ -21,6 +22,7 @@ const LoginPage: FC<ILoginPageProps> = () => {
 
     return (
         <div>
+            <LoginSlice />
             LoginPage
             <button
                 onClick={async () => {
@@ -34,18 +36,11 @@ const LoginPage: FC<ILoginPageProps> = () => {
                 Login
             </button>
             ICON
-            <Icon
-                colorVariant="icon-black"
-                iconName="outline-arrow-right"
-                sizeVariant="icon-sm"
-            />
+            <Icon colorVariant="icon-black" iconName="outline-arrow-right" sizeVariant="icon-sm" />
             <Input
+                className=""
                 placeholder="id"
-                addonAfter={<Icon
-                    iconName="outline-arrow-right"
-                    sizeVariant="icon-lg"
-                    colorVariant="icon-black"
-                />}
+                addonAfter={<Icon iconName="outline-arrow-right" sizeVariant="icon-lg" colorVariant="icon-black" />}
             />
             <br />
             <br />

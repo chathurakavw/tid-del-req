@@ -1,0 +1,72 @@
+.side-bar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  height: 100vh;
+
+  @include responsive("md"){
+    gap: 3rem;
+  }
+
+  .logo-wrapper{
+    opacity: 0;
+    background: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 50%;
+    padding: 1rem;
+    display: none;
+
+    @include responsive("xl"){
+      display: block;
+      margin: 0 1rem 0 0;
+    }
+
+    .logo{
+    }
+  }
+
+  #side-bar-wrapper{
+    display: flex;
+    //flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+    background: #ffffff;
+    //box-shadow: rgba(99, 99, 99, .4) 0px 2px 8px 0px;
+    //box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 4rem;
+    opacity: 0;
+    padding: 1.4rem;
+    margin: 0 1rem;
+    position: absolute;
+    bottom: .9rem;
+    left: 0;
+    right: 0;
+
+    @include responsive("md"){
+      margin: 0 8rem;
+    }
+
+    @include responsive("xl"){
+      position: relative;
+      flex-direction: column;
+      gap: 3rem;
+      margin: 0 1rem 0 0;
+    }
+
+    .sidebar-icon{
+      font-size: 1.25rem;
+      transition: .3s all ease;
+      color: #999999;
+      opacity: 0;
+
+      &:hover{
+        color: #1ea7fd;
+      }
+    }
+  }
+}
+
